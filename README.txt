@@ -5,7 +5,6 @@ build data management applications. These components are available
 separately as gems, and include:
 
 * yogo-db
-* yogo-support
 * yogo-auth
 * yogo-project
 
@@ -14,3 +13,7 @@ gems. In order to use this meta-gem you will need to include the
 following in your Gemfile:
 
 gem "yogo_framework"
+
+TODO:
+
+1) Add an example in the README of how to build an application
