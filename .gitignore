@@ -34,4 +34,3 @@ Gemfile.lock
 Gemfile.local.lock
 
 ## PROJECT::SPECIFIC
-lib/yogo_framework.rb
