@@ -1,26 +1,29 @@
 source 'http://rubygems.org'
 
 YOGO = 'git://github.com/yogo'
-YOGO_VERSION = '~> '
+YOGO_VERSION = '~> 0.0'
 
 group :runtime do
+
  # yogo-db requires yogo-operation, yogo-support, and yogo-datamapper
- gem 'yogo-db',     YOGO_VERSION, :git => "#{YOGO}/yogo-db.git"
- gem 'yogo-project',  YOGO_VERSION, :git => "#{YOGO}/yogo-project.git"
+ # This needs to be gemified
+ gem 'yogo-db'        , :git => "#{YOGO}/yogo-db.git"
+ gem 'yogo-datamapper', :git => "#{YOGO}/yogo-datamapper.git"
+ gem 'yogo-operation' , :git => "#{YOGO}/yogo-operation.git"
+ gem 'yogo-support'   , :git => "#{YOGO}/yogo-support.git"
+ gem 'yogo-project'   , :git => "#{YOGO}/yogo-project.git"
 
 # Once this gets factored out of VOEIS it will be its own gem
-# gem 'yogo-auth',    YOGO_VERSION, :git => "#{YOGO}/yogo-auth.git"
-
+# gem 'yogo-auth', :git => "#{YOGO}/yogo-auth.git"
 end
 
 group :development do
   gem 'racksh',                         :require => nil
   gem 'rake',           '~> 0.8.7'
   gem 'jeweler',        '~> 1.4'
-  gem 'hoe',            '~> 2.6'
 end
 
-group :quality do
+group :test do
   gem 'metric_fu',      '~> 1.3'
   gem 'rcov',           '~> 0.9.8'
   gem 'reek',           '~> 1.2.8'

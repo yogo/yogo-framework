@@ -1,19 +1,58 @@
-= yogo_framework
+= The Yogo Data Management Framework
 
-The Yogo Framework is a set of modular components that can be used to
-build data management applications. These components are available
-separately as gems, and include:
+* http://yogo.msu.montana.edu
 
-* yogo-db
-* yogo-auth
-* yogo-project
+== DESCRIPTION:
 
-The yogo_framework gem is a meta-gem that includes all of these
-gems. In order to use this meta-gem you will need to include the
-following in your Gemfile:
+This is a meta-gem that packages up and provides a single installable piece of software for users of the Yogo Data Management Framework.
 
-gem "yogo_framework"
+== FEATURES/PROBLEMS:
 
-TODO:
+* Forthcoming...
 
-1) Add an example in the README of how to build an application
+== SYNOPSIS:
+
+  FIX (code sample of usage)
+
+== REQUIREMENTS:
+
+* FIX (list of requirements)
+
+== INSTALL:
+
+* gem install yogo-framework
+
+== DEVELOPERS:
+
+After checking out the source, run:
+
+  $ bundle install
+  $ ...
+
+This task will install any missing dependencies, run the tests/specs,
+and generate the RDoc.
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 Ivan R. Judson, Montana State University
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
