@@ -3,8 +3,19 @@ source 'http://rubygems.org'
 YOGO = 'git://github.com/yogo'
 YOGO_VERSION = '~> 0.0'
 
-group :runtime do
+RSPEC_VERSION = '~> 2.0.0.beta.22'
 
+gem 'sinatra'
+gem 'rack'
+gem 'activesupport'
+gem 'dm-core'
+gem 'dm-migrations'
+gem 'dm-validations'
+gem 'dm-sqlite-adapter'
+gem 'dm-postgres-adapter'
+gem 'json'
+
+group :runtime do
  # yogo-db requires yogo-operation, yogo-support, and yogo-datamapper
  # This needs to be gemified
  gem 'yogo-db'        , :git => "#{YOGO}/yogo-db.git"
@@ -12,9 +23,8 @@ group :runtime do
  gem 'yogo-operation' , :git => "#{YOGO}/yogo-operation.git"
  gem 'yogo-support'   , :git => "#{YOGO}/yogo-support.git"
  gem 'yogo-project'   , :git => "#{YOGO}/yogo-project.git"
-
-# Once this gets factored out of VOEIS it will be its own gem
-# gem 'yogo-auth', :git => "#{YOGO}/yogo-auth.git"
+ # Once this gets factored out of VOEIS it will be its own gem
+ # gem 'yogo-auth', :git => "#{YOGO}/yogo-auth.git"
 end
 
 group :development do
