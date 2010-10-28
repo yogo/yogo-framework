@@ -1,7 +1,6 @@
 source :rubygems
 
 YOGO = 'git://github.com/yogo'
-YOGO_VERSION = '~> 0.0'
 
 RSPEC_VERSION = '~> 2.0.0.beta.22'
 
