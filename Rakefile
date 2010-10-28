@@ -1,46 +1,27 @@
 #!/usr/bin/env ruby
-
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+require 'bundler/version'
 require 'pathname'
 require 'rubygems'
 require 'rake'
 
-gems = %w[
-]
-
-AUTHOR           = 'The Yogo Team'
-EMAIL            = 'yogo@msu.montana.edu'
 GEM_NAME         = 'yogo-framework'
-#GEM_VERSION      = IO.readlines("VERSION")[0]
-GEM_DEPENDENCIES = gems.map { |gem_name| [ gem_name, "~> #{GEM_VERSION}" ] }
-GEM_CLEAN        = %w[ **/*.{gem,DS_Store} *.db doc/rdoc .config **/coverage cache ]
-GEM_EXTRAS       = { :has_rdoc => 'yard' }
-
-PROJECT_NAME        = 'yogo'
-PROJECT_URL         = 'http://yogo.msu.montana.edu'
-PROJECT_DESCRIPTION = 'Faster, Better, Simpler Data Management.'
-PROJECT_SUMMARY     = 'A framework for building user managable data management applications.'
-
-WINDOWS = (RUBY_PLATFORM =~ /win32|mingw|bccwin|cygwin/) rescue nil
-SUDO    = WINDOWS ? '' : ('sudo' unless ENV['SUDOLESS'])
+GEM_VERSION      = IO.readlines("VERSION")[0]
 
 desc "Install #{GEM_NAME}"
 task :install => :package do
   sh %{#{SUDO} gem install --local pkg/#{GEM_NAME}-#{GEM_VERSION}}
 end
 
-task(:spec) {}  # this gem does not provide any specs
-
-## Jeweler
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gemspec|
-    gemspec.name = GEM_NAME
-    gemspec.summary = PROJECT_SUMMARY
-    gemspec.description = PROJECT_DESCRIPTION
-    gemspec.email = EMAIL
-    gemspec.homepage = PROJECT_URL
-    gemspec.authors = [AUTHOR]
-  end
-rescue LoadError
-  puts "Jeweler not available run bundle install"
+desc "Build #{GEM_NAME} gem."
+task :build do
+  system "gem build #{GEM_NAME}.gemspec"
 end
+
+desc "Push #{GEM_NAME} gem to rubygems."
+task :release => :build do
+  system "gem push #{GEM_NAME}-#{GEM_VERSION}"
+end
+
+# this gem does not provide any specs
+task(:spec) { }
