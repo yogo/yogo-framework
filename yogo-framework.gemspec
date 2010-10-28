@@ -35,6 +35,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A framework for building user managable data management applications.}
 
+  s.add_bundler_dependencies
+
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
@@ -52,6 +54,13 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<dm-postgres-adapter>, [">= 0"])
       s.add_runtime_dependency(%q<dm-rest-adapter>, [">= 0"])
       s.add_runtime_dependency(%q<json>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-db>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-datamapper>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-operation>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-support>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-project>, [">= 0"])
+      # Once this gets factored out of VOEIS it will be its own gem
+      # s.add_runtime_dependency(%q<yogo-auth>, [">= 0"])
       s.add_dependency(%q<racksh>, [">= 0"])
       s.add_development_dependency(%q<rake>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
@@ -69,6 +78,14 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<dm-sqlite-adapter>, [">= 0"])
       s.add_dependency(%q<dm-postgres-adapter>, [">= 0"])
       s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
+      s.add_dependency(%q<json>, [">= 0"])
+      s.add_dependency(%q<yogo-db>, [">= 0"])
+      s.add_dependency(%q<yogo-datamapper>, [">= 0"])
+      s.add_dependency(%q<yogo-operation>, [">= 0"])
+      s.add_dependency(%q<yogo-support>, [">= 0"])
+      s.add_dependency(%q<yogo-project>, [">= 0"])
+      # Once this gets factored out of VOEIS it will be its own gem
+      # s.add_runtime_dependency(%q<yogo-auth>, [">= 0"])
       s.add_dependency(%q<json>, [">= 0"])
       s.add_dependency(%q<racksh>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
@@ -88,6 +105,13 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<dm-sqlite-adapter>, [">= 0"])
     s.add_dependency(%q<dm-postgres-adapter>, [">= 0"])
     s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
+    s.add_dependency(%q<yogo-db>, [">= 0"])
+    s.add_dependency(%q<yogo-datamapper>, [">= 0"])
+    s.add_dependency(%q<yogo-operation>, [">= 0"])
+    s.add_dependency(%q<yogo-support>, [">= 0"])
+    s.add_dependency(%q<yogo-project>, [">= 0"])
+    # Once this gets factored out of VOEIS it will be its own gem
+    # s.add_runtime_dependency(%q<yogo-auth>, [">= 0"])
     s.add_dependency(%q<json>, [">= 0"])
     s.add_dependency(%q<racksh>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])

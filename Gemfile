@@ -6,16 +6,6 @@ RSPEC_VERSION = '~> 2.0.0.beta.22'
 
 gemspec
 
-group :runtime do
- gem 'yogo-db'        , :git => "#{YOGO}/yogo-db.git"
- gem 'yogo-datamapper', :git => "#{YOGO}/yogo-datamapper.git"
- gem 'yogo-operation' , :git => "#{YOGO}/yogo-operation.git"
- gem 'yogo-support'   , :git => "#{YOGO}/yogo-support.git"
- gem 'yogo-project'   , :git => "#{YOGO}/yogo-project.git"
- # Once this gets factored out of VOEIS it will be its own gem
- # gem 'yogo-auth', :git => "#{YOGO}/yogo-auth.git"
-end
-
 group :development, :test do
   platforms(:mri_19) do
     gem 'ruby-debug19',       :require => 'ruby-debug'
