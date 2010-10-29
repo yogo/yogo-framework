@@ -1,33 +1,43 @@
 source :rubygems
-
-YOGO = 'git://github.com/yogo'
-
-RSPEC_VERSION = '~> 2.0.0.beta.22'
-
 gemspec
 
+gem "yogo-db"         , :git => "git://github.com/yogo/yogo-db.git"
+gem "yogo-datamapper" , :git => "git://github.com/yogo/yogo-datamapper.git"
+gem "yogo-operation"  , :git => "git://github.com/yogo/yogo-operation.git"
+# gem "yogo-support"    , :git => "git://github.com/yogo/yogo-support.git"
+gem "yogo-project"    , :git => "git://github.com/yogo/yogo-project.git"
+
+#
+# Development and Test Dependencies
+#
 group :development, :test do
+  # Development gems
+  gem "racksh"
+  gem "sinatra-reloader"
+  gem "rake"
+  gem "jeweler"
+  gem "yard"
+  gem "yardstick"
+  gem "metric_fu"
+  gem "rcov"
+  gem "reek"
+  gem "roodi"
+
+  # Testing gems
+  gem "rspec"
+  gem "rack-test"
+  gem "cucumber"
+  gem "autotest"
+  gem 'factory_girl'
+
+  # 1.9 vs 1.8 issues
   platforms(:mri_19) do
-    gem 'ruby-debug19',       :require => 'ruby-debug'
-    gem 'rack-debug19',       :require => 'rack-debug'
+    gem "ruby-debug19",       :require => "ruby-debug"
+    gem "rack-debug19",       :require => "rack-debug"
   end
 
-  platforms(:mri_18) do
+  platforms(:ruby_18) do
     gem "ruby-debug"
     gem "rack-debug"
   end
 end
-
-group :test do
-  gem "rspec",                RSPEC_VERSION
-  gem "autotest"
-  gem "rack-test"
-  gem "cucumber"
-  gem 'factory_girl'
-  gem 'metric_fu',      '~> 1.3'
-  gem 'rcov',           '~> 0.9.8'
-  gem 'reek',           '~> 1.2.8'
-  gem 'roodi',          '~> 2.1'
-  gem 'yardstick',      '~> 0.1'
-end
-
