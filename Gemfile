@@ -1,12 +1,6 @@
 source :rubygems
 gemspec
 
-gem "yogo-db"         , :git => "git://github.com/yogo/yogo-db.git"
-gem "yogo-datamapper" , :git => "git://github.com/yogo/yogo-datamapper.git"
-gem "yogo-operation"  , :git => "git://github.com/yogo/yogo-operation.git"
-# gem "yogo-support"    , :git => "git://github.com/yogo/yogo-support.git"
-gem "yogo-project"    , :git => "git://github.com/yogo/yogo-project.git"
-
 #
 # Development and Test Dependencies
 #
