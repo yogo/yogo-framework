@@ -41,36 +41,33 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<data_mapper>, [">= 0"])
+      s.add_runtime_dependency(%q<data_mapper>, ["~> 1.0.2"])
       s.add_runtime_dependency(%q<dm-is-list>, [">= 0"])
       s.add_runtime_dependency(%q<dm-is-versioned>, [">= 0"])
       s.add_runtime_dependency(%q<dm-rest-adapter>, [">= 0"])
-      s.add_runtime_dependency(%q<racksh>, [">= 0"])
-      s.add_runtime_dependency(%q<rake>, [">= 0"])
-      s.add_runtime_dependency(%q<jeweler>, [">= 0"])
-      s.add_runtime_dependency(%q<yard>, [">= 0"])
-      s.add_runtime_dependency(%q<sinatra-reloader>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-db>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-datamapper>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-operation>, [">= 0"])
+      s.add_runtime_dependency(%q<yogo-project>, [">= 0"])
     else
-      s.add_dependency(%q<data_mapper>, [">= 0"])
+      s.add_dependency(%q<data_mapper>, ["~> 1.0.2"])
       s.add_dependency(%q<dm-is-list>, [">= 0"])
       s.add_dependency(%q<dm-is-versioned>, [">= 0"])
       s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
-      s.add_dependency(%q<racksh>, [">= 0"])
-      s.add_dependency(%q<rake>, [">= 0"])
-      s.add_dependency(%q<jeweler>, [">= 0"])
-      s.add_dependency(%q<yard>, [">= 0"])
-      s.add_dependency(%q<sinatra-reloader>, [">= 0"])
+      s.add_dependency(%q<yogo-db>, [">= 0"])
+      s.add_dependency(%q<yogo-datamapper>, [">= 0"])
+      s.add_dependency(%q<yogo-operation>, [">= 0"])
+      s.add_dependency(%q<yogo-project>, [">= 0"])
     end
   else
-    s.add_dependency(%q<data_mapper>, [">= 0"])
+    s.add_dependency(%q<data_mapper>, ["~> 1.0.2"])
     s.add_dependency(%q<dm-is-list>, [">= 0"])
     s.add_dependency(%q<dm-is-versioned>, [">= 0"])
     s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
-    s.add_dependency(%q<racksh>, [">= 0"])
-    s.add_dependency(%q<rake>, [">= 0"])
-    s.add_dependency(%q<jeweler>, [">= 0"])
-    s.add_dependency(%q<yard>, [">= 0"])
-    s.add_dependency(%q<sinatra-reloader>, [">= 0"])
+    s.add_dependency(%q<yogo-db>, [">= 0"])
+    s.add_dependency(%q<yogo-datamapper>, [">= 0"])
+    s.add_dependency(%q<yogo-operation>, [">= 0"])
+    s.add_dependency(%q<yogo-project>, [">= 0"])
   end
 end
 
