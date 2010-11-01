@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{yogo-framework}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["The Yogo Team"]
-  s.date = %q{2010-10-29}
+  s.date = %q{2010-11-01}
   s.description = %q{Faster, Better, Simpler Data Management.}
   s.email = %q{yogo@msu.montana.edu}
   s.extra_rdoc_files = [
@@ -41,33 +41,36 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<yogo-db>)
-      s.add_runtime_dependency(%q<yogo-datamapper>                )
-      s.add_runtime_dependency(%q<yogo-operation>                 )
-      s.add_runtime_dependency(%q<yogo-project>                   )
-      s.add_runtime_dependency(%q<data_mapper>      , ["~> 1.0.2"])
-      s.add_runtime_dependency(%q<dm-is-list>                     )
-      s.add_runtime_dependency(%q<dm-is-versioned>                )
-      s.add_runtime_dependency(%q<dm-rest-adapter>                )
+      s.add_runtime_dependency(%q<data_mapper>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-is-list>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-is-versioned>, [">= 0"])
+      s.add_runtime_dependency(%q<dm-rest-adapter>, [">= 0"])
+      s.add_runtime_dependency(%q<racksh>, [">= 0"])
+      s.add_runtime_dependency(%q<rake>, [">= 0"])
+      s.add_runtime_dependency(%q<jeweler>, [">= 0"])
+      s.add_runtime_dependency(%q<yard>, [">= 0"])
+      s.add_runtime_dependency(%q<sinatra-reloader>, [">= 0"])
     else
-      s.add_dependency(%q<yogo-db>                                )
-      s.add_dependency(%q<yogo-datamapper>                        )
-      s.add_dependency(%q<yogo-operation>                         )
-      s.add_dependency(%q<yogo-project>                           )
-      s.add_dependency(%q<data_mapper>              , ["~> 1.0.2"])
-      s.add_dependency(%q<dm-is-list>                             )
-      s.add_dependency(%q<dm-is-versioned>                        )
-      s.add_dependency(%q<dm-rest-adapter>                        )
+      s.add_dependency(%q<data_mapper>, [">= 0"])
+      s.add_dependency(%q<dm-is-list>, [">= 0"])
+      s.add_dependency(%q<dm-is-versioned>, [">= 0"])
+      s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
+      s.add_dependency(%q<racksh>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<yard>, [">= 0"])
+      s.add_dependency(%q<sinatra-reloader>, [">= 0"])
     end
   else
-    s.add_dependency(%q<yogo-db>                                 )
-    s.add_dependency(%q<yogo-datamapper>                         )
-    s.add_dependency(%q<yogo-operation>                          )
-    s.add_dependency(%q<yogo-project>                            )
-    s.add_dependency(%q<data_mapper>               , ["~> 1.0.2"])
-    s.add_dependency(%q<dm-is-list>                              )
-    s.add_dependency(%q<dm-is-versioned>                         )
-    s.add_dependency(%q<dm-rest-adapter>                         )
+    s.add_dependency(%q<data_mapper>, [">= 0"])
+    s.add_dependency(%q<dm-is-list>, [">= 0"])
+    s.add_dependency(%q<dm-is-versioned>, [">= 0"])
+    s.add_dependency(%q<dm-rest-adapter>, [">= 0"])
+    s.add_dependency(%q<racksh>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<yard>, [">= 0"])
+    s.add_dependency(%q<sinatra-reloader>, [">= 0"])
   end
 end
 
