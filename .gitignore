@@ -33,4 +33,7 @@ Gemfile.local
 Gemfile.lock
 Gemfile.local.lock
 
+## RVM
+.rvmrc
+
 ## PROJECT::SPECIFIC
