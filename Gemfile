@@ -1,7 +1,7 @@
 source :rubygems
 # gemspec
 
-gem "data_mapper"
+gem "data_mapper", "1.1.0"
 
 #
 # Development and Test Dependencies
