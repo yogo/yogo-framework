@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency("yogo-operation")
   gem.add_runtime_dependency("yogo-project")
 
-  gem.add_runtime_dependency("data_mapper", "~> 1.2.0")
+  gem.add_runtime_dependency("data_mapper")
   gem.add_runtime_dependency("dm-is-list")
   gem.add_runtime_dependency("dm-is-versioned")
   gem.add_runtime_dependency("dm-rest-adapter")
